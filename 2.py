@@ -98,7 +98,7 @@ print(reversed_sorted_a)
 
 
 print("Można wlaczać/wylączać poszczególne metody dataclass")
-@dataclass(init=True, repr=True, eq=False, order=False, frozen=False)
+@dataclass(init=True, repr=True, eq=False, order=False, frozen=True)
 class C:
     pass
 
@@ -111,3 +111,64 @@ print(a) #wylączona
 b = NumberC(2)
 c = NumberC(3)
 print(a==b) #właczona
+print(b)
+
+print("frozen=True - obiekt neimodyfikowalny nie można zmieniać wartości - stałe")
+@dataclass(frozen=True)
+class NumberD:
+    value:int = 0
+
+a = NumberD()
+print(a.value)
+#a.value = 3 #niedozwolona operacja value is read only, error dataclasses.FrozenInstanceError: cannot assign to field 'value'
+
+a = (11,12,13)
+a1,a2,a3 = a #rozpakowywanie krotek, wynikiem jest a1=11, a2=12, a3=13
+
+import math
+class Float:
+    def __init__(self,value=0):
+        self.value = value
+        self.process()
+
+    def process(self):
+        self.decimal, self.integer = math.modf(self.value)  # rozpakowanie kontenera
+        # self.decimal = math.modf(self.value)[0] #to samo co powyżej tylko rozpisane
+        # self.integer = math.modf(self.value)[1]
+
+a = Float(2.2)
+print(a.decimal)
+print(a.integer)
+
+@dataclass
+class FloatNumber:
+    value: float = 0.0
+
+    def __post_init__(self):   #taka metoda zeby juz w momencie inicjalizacji była wwykonywana
+        self.decimal, self.integer = math.modf(self.value)
+
+print("prezentacja dziedziczenia dataclass")
+@dataclass
+class Person:
+    name: str
+    age:int = 0
+
+    def __post_init__(self):
+        print("Person A")
+
+
+@dataclass
+class Student(Person):
+    grade: int = 0
+
+    def __post_init__(self):
+        super().__post_init__()
+        print("Student B")
+
+
+s= Student('name', 22, 2)
+#wykonuje się post_init PErson a potem Student
+print(s.name)
+print(s.age)
+print(s.grade)
+
