@@ -1,5 +1,6 @@
 import random
 from dataclasses import dataclass
+import math
 
 # print(dir(collections))
 
@@ -111,3 +112,48 @@ class Number_d:
 d = Number_d(5)
 print(d)
 # d.val ue = 3
+
+
+class Float:
+    def __init__(self, value=0):
+        self.value = value
+        self.process()
+
+    def process(self):
+        #rozpakowanie krotki z funkcji modf do 2 zmiennych
+        self.decimal, self.integer = math.modf(self.value)
+
+
+
+a = Float(2.2)
+print(a.decimal, a.integer)
+
+
+@dataclass
+class FloatNumber:
+    value: float = 0.0
+
+    def __post_init__(self):
+        self.decimal, self.integer = math.modf(self.value)
+
+a = FloatNumber(2.2)
+print(a.value)
+print(a.integer)
+print(a.decimal)
+
+# dataclass dziedziczenie
+@dataclass
+class Person:
+    name: str
+    age: int = 0
+
+@dataclass
+class Student(Person):
+    grade: int = 0
+
+s = Student(20, "John", 2)
+print(s.age)
+print(s.name)
+print(s.grade)
+
+
