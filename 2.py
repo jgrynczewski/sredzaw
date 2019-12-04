@@ -5,16 +5,16 @@ class NumberA:
     def __init__(self, value):
         self.value = value
 
-    def __repr__(self):
+    def __repr__(self): #gdy nie mam tej metody to print(a1) daje  <__main__.A object at 0x7ff211370588>
         return str(self.value)
 
-    def __eq__(self, other):
+    def __eq__(self, other): #gdy nie mam tej metody to print(a1 > a2) #daje brzydki error pypeError: '>' not supported between instances of 'A' and 'A'
         return self.value == other.value
 
     def __lt__(self, other):
         return self.value < other.value
 
-print('klasa A (bez dekoratora)')
+print('klasa A (bez dekoratora @dataclass)')
 
 a1 = NumberA(1)
 print(a1.value)
@@ -25,7 +25,7 @@ print(a1 == a2)
 print(a1 > a2)
 print(a2 > a1)
 
-print('klasa B (z dekoratorem)')
+print('klasa B (z dekoratorem @dataclass)')
 
 @dataclass(order=True) #to samo tylko krocej
 class NumberB:
@@ -39,10 +39,6 @@ print(b1 == b2) #dekorator i order daje nam to, ze defaultowo obiekt można ład
 print(b1 > b2)
 print(b2 > b1)
 
-
-class A:
-    pass
-print(dir(A))
 
 #każda klasa ma metody specjalne defaultowo, to te z __ przed nazwą
 
@@ -60,9 +56,58 @@ print(dir(A))
 # x > y wywołuje x.__gt__(y), \
 # x >= y wywołuje x.__ge__(y).
 
-aa1 = A()
-aa2 = A()
-print(aa1) #daje brzydku print <__main__.A object at 0x7ff211370588>
-print(aa1 > aa2) #daje brzydki error pypeError: '>' not supported between instances of 'A' and 'A'
 
 
+
+@dataclass(order=True)
+class Person:
+    name: str
+    age: int = 0
+
+p1 = Person('Tomek',10)
+p2 = Person('Ania',20)
+
+print("Wyrażenia listowe")
+
+
+print("zapis w pętli")
+result=[]
+for i in range(1,5):
+    result.append(i**2)
+
+print(result)
+print("zapis w wyrażeniu listowym")
+result = [i**2 for i in range(1,5)] #to samo co powyżej w pętli tylko krócej zapisane
+print(result)
+
+print("losujemy 5 cyfr w wyrażeniu listowym")
+import random
+result = [random.randint(1,10)**2 for _ in range(1,5)]
+print(result)
+
+
+print("losujemy 10 obiektów klasy NumsberB w wyrażeniu listowym (rzutujemy wylosowane liczby na klasę NumberB)")
+a = [NumberB(random.randint(1,10)) for _ in range(1,10)]
+print(a)
+
+print("sortujemy sobie nasze obiekty")
+sorted_a=sorted(a)
+print(sorted_a)
+reversed_sorted_a=sorted(a, reverse=True) #dzięki temu że użyliśmy @dataclass to mamy zaimplementowane juz sortowanie
+print(reversed_sorted_a)
+
+
+print("Można wlaczać/wylączać poszczególne metody dataclass")
+@dataclass(init=True, repr=True, eq=False, order=False, frozen=False)
+class C:
+    pass
+
+@dataclass(repr=False, eq=True)
+class NumberC:
+    value: int
+
+a = NumberC(1)
+print(a) #wylączona
+b = NumberC(2)
+c = NumberC(3)
+print(a==b) #właczona
