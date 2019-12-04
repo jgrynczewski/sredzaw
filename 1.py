@@ -1,4 +1,6 @@
 import collections
+import math import pi
+import math import *
 
 jack = ('Jack', 30, 'male')
 print(f'Tuple representation {jack}')
