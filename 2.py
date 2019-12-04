@@ -74,4 +74,66 @@ class NumberD:
 
 a = NumberD(1)
 print(a.value)
-a.value = 2
+#a.value = 2
+
+import math
+
+class Float:
+    def __init__(self, value=0):
+        self.value = value
+        self.process()
+        #self.decimal = math.modf(self.value)
+        self.decimal, self.integer = math.modf(self.value)
+
+    def process(self):
+        self.decimal, self.integer = math.modf(self.value)
+
+
+a = Float(2.2)
+print(a.decimal)
+print(a.integer)
+
+@dataclass
+class FloatNumber:
+    value: float = 0.0
+
+    def __post_init__(self):
+        self.decimal, self.integer = math.modf(self.value)
+
+a = FloatNumber(2.2)
+print(a.value)
+print(a.integer)
+print(a.decimal)
+
+@dataclass
+class Person:
+    name: str
+    age: int = 20
+
+@dataclass
+class Student(Person):
+    grade: int = 0
+
+print(type(Person))
+
+s = Student(20, 'John', 2)
+print(s.age)
+print(s.name)
+print(s.grade)
+
+@dataclass
+class A:
+    a: int
+
+    def __post_init__(self):
+        print('A')
+
+class B(A):
+    b: int
+
+    def __post_init__(self):
+        super().__post_init__()
+        print('B')
+
+a = B(1,2)
+print(a)
