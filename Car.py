@@ -6,12 +6,15 @@
 from collections import namedtuple
 from dataclasses import dataclass
 
-CarNamedTuple = namedtuple(("Car","marka model liczba_drzwi"))
+CarNamedTuple = namedtuple("Car","marka model liczba_drzwi")
 
 
 car1 = CarNamedTuple ("nissan","kaszkaj",5)
 car2 = CarNamedTuple ("toyota","yaris",5)
 car3 = CarNamedTuple ("audi","a4",5)
+
+print(car1)
+print(car1.liczba_drzwi)
 
 @dataclass
 class CarDataClass:
@@ -24,6 +27,7 @@ car2 = CarDataClass("toyota","yaris",5)
 car3 = CarDataClass("audi","a4",5)
 
 
-
+print(car1)
+print(car1.liczba_drzwi)
 
 
