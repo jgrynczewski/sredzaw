@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/two_namedtuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/two_namedtuple.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +235,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575492149529</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="small changes">
+      <created>1575499189363</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575499189363</updated>
+    </task>
+    <task id="LOCAL-00007" summary="zadanie 2">
+      <created>1575499236843</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575499236843</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +271,8 @@
     <MESSAGE value="dataclass ver2" />
     <MESSAGE value="circle_area" />
     <MESSAGE value="namedtuple" />
-    <option name="LAST_COMMIT_MESSAGE" value="namedtuple" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="zadanie 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="zadanie 2" />
   </component>
 </project>

@@ -29,7 +29,7 @@
 import collections
 from dataclasses import dataclass
 
-Amount = collections.namedtuple('Amount', 'sum symbol')
+Amount = collections.namedtuple('Amount', 'amount symbol')
 Currenency = collections.namedtuple('Currenency', 'name symbol converter')
 
 EUR = Currenency(name = 'euro', symbol = 'EUR', converter = 4.32)
@@ -49,14 +49,14 @@ class CurrencyAccount:
 
     def pay_out(self, amount):
         if total_available() > 0:
-            return Amount
+            return Amount.amount
         else:
             return 'Nie masz dostępnych środków'
 
     def pay_in(self, amount):
         if Amount.symbol == Currenency.symbol:
-            amount = Amount.sum * Currenency.converter
-            return amount
+            account_balance += Amount.amount * Currenency.converter
+            return account_balance
 
 
 
