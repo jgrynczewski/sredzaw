@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/7.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adnotacje_typow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/funkcjeisistance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programowanie_funkcyjne.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.funkcjeisistance">
+  <component name="RunManager" selected="Python.programowanie_funkcyjne">
     <configuration name="7" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,7 +158,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="new_args" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="programowanie_funkcyjne" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -172,7 +170,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/new_args.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/programowanie_funkcyjne.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -183,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.programowanie_funkcyjne" />
         <item itemvalue="Python.funkcjeisistance" />
         <item itemvalue="Python.7" />
         <item itemvalue="Python.adnotacje_typow" />
         <item itemvalue="Python.args_kwargs" />
-        <item itemvalue="Python.new_args" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575546995092</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fukcje itd.">
+      <created>1575554670821</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1575554670821</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +312,7 @@
     <MESSAGE value="args i kwargs" />
     <MESSAGE value="rozpakowywanie" />
     <MESSAGE value="rozpakowywanie cz. dalsza" />
-    <option name="LAST_COMMIT_MESSAGE" value="rozpakowywanie cz. dalsza" />
+    <MESSAGE value="fukcje itd." />
+    <option name="LAST_COMMIT_MESSAGE" value="fukcje itd." />
   </component>
 </project>
