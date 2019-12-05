@@ -99,3 +99,8 @@ def func_weird(a,b,c,d):
 
 func(*t)
 
+
+# wprowadzanie argumentu nazwanego po kwargu
+d1 = {"sep": "--"}
+
+print('asd', 'qwe', **d1)
