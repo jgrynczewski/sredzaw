@@ -56,6 +56,7 @@ class CurrencyAccount:
         else:
             print("Sorry, amount not available.")
 
+
     def pay_in(self, amount):
         self.stan += amount
 
@@ -83,14 +84,16 @@ class ExchangeOffice:
         for currency in self.waluty:
             if currency.skrot == abbr:
                 return currency
-
+    #krotsza wersja find_currency
+    def get_currency(self, abbr):
+        return [currency for currency in self.waluty if currency.skrot==abbr][0]
 
     def exchange_to_pln(self, amount):
-        currency = self.find_currency(amount.skrot)
+        currency = self.get_currency(amount.skrot)
         return Amount((currency.przelicznik-self.spread/2)*amount.kwota, 'PLN')
 
     def exchange_from_pln(self, amount, target):
-        currency = self.find_currency(target)
+        currency = self.get_currency(target)
 
         return Amount(1/(currency.przelicznik+self.spread/2)*amount.kwota, target)
 
