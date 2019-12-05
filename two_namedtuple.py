@@ -32,31 +32,64 @@ from dataclasses import dataclass
 Amount = collections.namedtuple('Amount', 'amount symbol')
 Currenency = collections.namedtuple('Currenency', 'name symbol converter')
 
-EUR = Currenency(name = 'euro', symbol = 'EUR', converter = 4.32)
-USD = Currenency(name = 'dolar', symbol = 'USD', converter = 3.93)
-CHF = Currenency(name = 'frank', symbol = 'CHF', converter = 3.95)
-PLN = Currenency(name = 'zloty', symbol = 'PLN', converter = 1.00)
+c_1 = Currenency('euro', 'EUR',  4.32)
+c_2 = Currenency('dolar', 'USD', 3.93)
+c_3 = Currenency('frank', 'CHF', 3.95)
+c_4 = Currenency('zloty', 'PLN', 1.00)
+
+a_1 = Amount(amount = , symbol= '')
+a_2 = Amount(amount = , symbol= '')
 
 @dataclass
 class CurrencyAccount:
     symbol: str
-    account_balance: float
+    balance: float
     debet: float
 
     @property
     def total_available(self):
-        return sum(self.account_balance, self.debet)
+        return Amount(self.balance + self.debet, self.symbol)
 
     def pay_out(self, amount):
-        if total_available() > 0:
-            return Amount.amount
+        if amount < self.total_available.balance:
+            self.balance -= amount
+            return Amount(amount, self.symbol)
         else:
             return 'Nie masz dostępnych środków'
 
     def pay_in(self, amount):
-        if Amount.symbol == Currenency.symbol:
-            account_balance += Amount.amount * Currenency.converter
-            return account_balance
+        self.balance += amount
+
+@dataclass
+class ExchangeOffice:
+    speed_spead: float = 0.05
+    waluty: tuple = (c_1, c_2, c_3, c_4)
+
+    def exchange_to_pln(self, amount):
+        #znajdź przelicznik
+        waluta_wplaty = Amount.symbol
+        #przelicz
+        for currency in self.waluty:
+            if currency.symbol == waluta_wplaty:
+                przelicznik = currency.converter
+                break
+            kwota = Amount((przelicznik - self.speed_spead/2)*Amount.amount, 'PLN')
+
+    def exchange_from_pln(self, amount, target):
+        waluta_wplaty = Amount.symbol
+        for currency in self.waluty:
+            if currency.symbol == target:
+                przelicznik = currency.converter
+                break
+        return Amount(1/(przelicznik + self.speed_spead/2) * Amount.amount, target)
 
 
 
+
+ca_1 = CurrencyAccount('PLN', 1000, 1000)
+eo_1 = ExchangeOffice()
+
+kwota_wplaty = Amount(1000, 'USD')
+wyplata_1 = eo_1.exchange_to_pln(kwota_wplaty)
+kwota_wplaty = Amount(1000, 'PLN')
+wyplata_2 = eo_1.exchange_from_pln(kwota_wplaty)

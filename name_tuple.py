@@ -5,10 +5,10 @@
 
 # Powtórz to samo używając dataclass
 
-import collections
+from collections import namedtuple
 from dataclasses import dataclass
 
-Car = collections.namedtuple('Car', 'mark model nr_doors')
+Car = namedtuple('Car', 'mark model nr_doors')
 
 small_car = Car(mark = 'Toyota', model = 'Yaris', nr_doors = 4)
 print(f'Example of small car {small_car}')
