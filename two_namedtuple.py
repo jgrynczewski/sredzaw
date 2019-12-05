@@ -65,23 +65,24 @@ class ExchangeOffice:
     speed_spead: float = 0.05
     waluty: tuple = (c_1, c_2, c_3, c_4)
 
+    def find_currency(self, amount):
+        for currency in self.waluty:
+            if currency.symbol == abbr:
+                return currency
+
+    def _get_currency(self, abbr):
+        return [currency for currency in self.waluty if currency.symbol == abbr][0]
+
     def exchange_to_pln(self, amount):
         #znajdź przelicznik
-        waluta_wplaty = Amount.symbol
+       # waluta_wplaty = amount.symbol
         #przelicz
-        for currency in self.waluty:
-            if currency.symbol == waluta_wplaty:
-                przelicznik = currency.converter
-                break
-            kwota = Amount((przelicznik - self.speed_spead/2)*Amount.amount, 'PLN')
+        currency = self._get_currency(amount.symbol)
+        return Amount((przelicznik - self.speed_spead/2)*amount.amount, 'PLN')
 
     def exchange_from_pln(self, amount, target):
-        waluta_wplaty = Amount.symbol
-        for currency in self.waluty:
-            if currency.symbol == target:
-                przelicznik = currency.converter
-                break
-        return Amount(1/(przelicznik + self.speed_spead/2) * Amount.amount, target)
+        currency = self._get_currency(target)
+        return Amount(1/(currency.przelicznik + self.speed_spead/2) * amount.amount, target)
 
 
 

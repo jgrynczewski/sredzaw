@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/name_tuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/name_tuple.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/two_namedtuple.py" beforeDir="false" afterPath="$PROJECT_DIR$/two_namedtuple.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
