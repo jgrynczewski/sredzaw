@@ -78,25 +78,18 @@ class ExchangeOffice:
     spread: float = 0.05
     waluty: tuple = (c1, c2, c3, c4)
 
-    def exchange_to_pln(self, amount):
-        # znajdz przelicznik
-        waluta_wplaty = amount.skrot
-
+    def _get_currency(self, abbr):
         for currency in self.waluty:
-            if currency.skrot == waluta_wplaty:
-                przelicznik = currency.przelicznik
-                break
-        # przelicz
-        return Amount((przelicznik-self.spread/2)*amount.kwota, 'PLN')
+            if currency.skrot == abbr:
+                return currency
+
+    def exchange_to_pln(self, amount):
+        currency = self._get_currency(amount.skrot)
+        return Amount((currency.przelicznik-self.spread/2)*amount.kwota, 'PLN')
 
     def exchange_from_pln(self, amount, target):
-
-        for currency in self.waluty:
-            if currency.skrot == target:
-                przelicznik = currency.przelicznik
-                break
-
-        return Amount(1/(przelicznik+self.spread/2)*amount.kwota, target)
+        currency = self._get_currency(target)
+        return Amount(1/(currency.przelicznik+self.spread/2)*amount.kwota, target)
 
 eo1 = ExchangeOffice()
 
