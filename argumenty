@@ -1,0 +1,8 @@
+argumenty
+    z wartością domyślną - to nazwane
+    bez wartosci domyślenj - pozycyjne występują pierwsze na liscie argumentow
+
+ argumenty - paramety wariadyczne
+ funkcja(pozycyjne, *args, nazwane, **kwargs)
+
+ **dict wypakowanie slownika
