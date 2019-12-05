@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/programowanie_funkcyjne.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programowanie_funkcyjne.py" beforeDir="false" afterPath="$PROJECT_DIR$/programowanie_funkcyjne.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575554670821</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="map, filter">
+      <created>1575556208400</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1575556208400</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,6 +319,7 @@
     <MESSAGE value="rozpakowywanie" />
     <MESSAGE value="rozpakowywanie cz. dalsza" />
     <MESSAGE value="fukcje itd." />
-    <option name="LAST_COMMIT_MESSAGE" value="fukcje itd." />
+    <MESSAGE value="map, filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="map, filter" />
   </component>
 </project>
