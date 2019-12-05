@@ -79,9 +79,7 @@ class ExchangeOffice:
     waluty: tuple = (c1, c2, c3, c4)
 
     def _get_currency(self, abbr):
-        for currency in self.waluty:
-            if currency.skrot == abbr:
-                return currency
+        return [currency for currency in self.waluty if currency.skrot==abbr][0]
 
     def exchange_to_pln(self, amount):
         currency = self._get_currency(amount.skrot)
