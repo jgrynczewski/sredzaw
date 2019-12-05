@@ -44,12 +44,16 @@ print(reduce(lambda x,y: x*y, range(1,5))) # to chyba 4!
 
 
 def func_pom(x):
-    return x[1]
+    return x[0]**2 + x[1]**2  # odleglość punktu od srodka układu
 
 pairs = [[1,18],[2,9],[3,8]] #macierz, albo lista punktów
 
 print(min(pairs)) #[1,18]
 print(max(pairs)) #[3,8]
 
-print(min(pairs), key = func_pom) #[3,8] przekazujemy tu funkcję w parametrze
-print(max(pairs), key = func_pom) #[1,18]
+
+print(min(pairs, key = func_pom)) # przekazujemy tu funkcję w parametrze
+print(max(pairs, key = func_pom)) #
+
+print(min(pairs, key = lambda x: x[1])) # funkcja wpisana inline
+print(max(pairs, key = lambda x: x[0]**2 + x[1]**2)) # funkcja wpisana inline
