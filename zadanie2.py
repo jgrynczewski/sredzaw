@@ -4,10 +4,10 @@
 # - 'Amount' z dwoma polami: kwota oraz skrót nazwy waluty
 # - 'Currnency' z trzema polami: nazwa skrót nazwy oraz przelicznik na PLN
 
-import collections
+from collections import namedtuple
 
-Amount = collections.namedtuple("Amount", "amount curr_short_name")
-Currency = collections.namedtuple("Currency", "name curr_short_name to_pln_conv")
+Amount = namedtuple("Amount", "kwota skrot")
+Currency = namedtuple("Currency", "nazwa skrot przelicznik")
 
 # 2. Utwórz cztery instsancje Currency:
 # - EUR (z kursem 4.32)
@@ -15,11 +15,17 @@ Currency = collections.namedtuple("Currency", "name curr_short_name to_pln_conv"
 # - CHF (z kursem 3.95)
 # - PLN (z kursem 1.00)
 
-EUR = Currency(name='Euro', curr_short_name='EUR', to_pln_conv=4.32)
-USD = Currency(name='United States Dollar', curr_short_name='USD', to_pln_conv=3.93)
-CHF = Currency(name='Swiss Franc', curr_short_name='CHF', to_pln_conv=3.95)
-PLN = Currency(name='Polish Zloty', curr_short_name='PLN', to_pln_conv=1.00)
+c1 = Currency('euro', "EUR", 4.32)
+c2 = Currency('dolar', "USD", 4)
+c3 = Currency('frank', "CHF", 3.95)
+c4 = Currency('zloty', "PLN", 1.00)
 
+print(c3)
+
+a1  = Amount(30, 'PLN')
+a2 = Amount(50, "USD")
+
+print(a2)
 
 # 3. Utwórz dataclass dla konta walutowego 'CurrencyAccount':
 # - atrybuty: skrót waluty, stan konta oraz wartość debetu
@@ -28,47 +34,72 @@ PLN = Currency(name='Polish Zloty', curr_short_name='PLN', to_pln_conv=1.00)
 #   - 'pay_out(amount)' - sprawdza, czy na koncie jest dostepna kwota (suma stanu konta i
 #     debetu) jeżeli tak, to zwraca obiekt namedtuple Amount (zdefiniowany w czesniej)
 #   - 'pay_in(amount)' - dodaje kwotę do stanu konta (uwaga: amount jest liczbą - kwotą
-#     w odpowiedniej walucie
+#     w odpowiedniej walucie)
+
 from dataclasses import dataclass
 
 @dataclass
 class CurrencyAccount:
-    curr_short_name: str
-    account_value: float
-    debit_value: float
+    skrot: str
+    stan: float
+    debet: float
+
 
     @property
     def total_available(self):
-        return self.account_value+self.debit_value
+        return Amount(self.stan + self.debet, self.skrot)
 
-    def pay_out(self, Amount):
-        if self.total_available > 0:
-            return Amount
+    def pay_out(self, amount):
+        if amount < self.total_available.kwota:
+            self.stan -= amount
+            return Amount(amount, self.skrot)
+        else:
+            print("Sorry, amount not available.")
 
-    def pay_in(self, Amount):
-        if Amount.amount > 0 and Amount.curr_short_name == self.curr_short_name:
-            self.account_value += Amount.amount
+    def pay_in(self, amount):
+        self.stan += amount
 
+ca1 = CurrencyAccount("PLN", 1000, 1000)
+
+print(ca1.total_available)
+ca1.pay_out(500)
+print(ca1.total_available)
+ca1.pay_in(1000)
+print(ca1.total_available)
 
 # 4. Utwórz dataclass dla kantory ExchangeOffice:
 # - atrybuty: wartość spreadu, dostepne waluty (domyslnie - wszystkie utworzone wczesniej)
-# - metody prywatne - przeliczanie z uwzglednieniem spreadu:
+# - metody - przeliczanie z uwzglednieniem spreadu:
 #   'exchange_to_pln(amount)' - wymien kwote w innej walucie na PLN (użyj Amount)
 #   'exchange_from_pln(amount, target)' - wymień kwotę w PLN na walutę 'target' (tu też użyj
 #    Amount).
 
 @dataclass
 class ExchangeOffice:
-    spread: float
-    available_currencies: (USD, PLN, EUR, CHF)
+    spread: float = 0.1
+    waluty: tuple = (c1, c2, c3, c4)
 
-    def __exchange_to_pln(self, Amount):
-        pln_amount = Amount.amount * (Amount.cur_short_name.to_pln_conv + self.spread)
-        return pln_amount
+    def find_currency(self, abbr):
+        for currency in self.waluty:
+            if currency.skrot == abbr:
+                return currency
 
-    def __exchange_from_pln(self, Amount):
-        target_amount = Amount.amount / (Amount.cur_short_name.to_pln_conv + self.spread)
-        return target_amount
 
-# Amount = collections.namedtuple("Amount", "amount curr_short_name")
-# Currency = collections.namedtuple("Currency", "name curr_short_name to_pln_conv")
+    def exchange_to_pln(self, amount):
+        currency = self.find_currency(amount.skrot)
+        return Amount((currency.przelicznik-self.spread/2)*amount.kwota, 'PLN')
+
+    def exchange_from_pln(self, amount, target):
+        currency = self.find_currency(target)
+
+        return Amount(1/(currency.przelicznik+self.spread/2)*amount.kwota, target)
+
+eo1 = ExchangeOffice()
+
+kwota_wplaty = Amount(1000, 'USD')
+wyplata1 = eo1.exchange_to_pln(kwota_wplaty)
+kwota_wplaty = Amount(1000, "PLN")
+wyplata2 = eo1.exchange_from_pln(kwota_wplaty, "USD")
+
+print(wyplata1)
+print(wyplata2)
