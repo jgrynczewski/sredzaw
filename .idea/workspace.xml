@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/args_kwargs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/args_kwargs.py" beforeDir="false" afterPath="$PROJECT_DIR$/args_kwargs.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -263,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575544573205</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rozpakowywanie">
+      <created>1575546074471</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1575546074472</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +295,7 @@
     <MESSAGE value="zadanie 2" />
     <MESSAGE value="zadanie 2 - poprawka1" />
     <MESSAGE value="args i kwargs" />
-    <option name="LAST_COMMIT_MESSAGE" value="args i kwargs" />
+    <MESSAGE value="rozpakowywanie" />
+    <option name="LAST_COMMIT_MESSAGE" value="rozpakowywanie" />
   </component>
 </project>
