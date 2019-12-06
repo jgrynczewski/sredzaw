@@ -165,3 +165,22 @@ a.add()
 b.add()
 
 print(my_list)
+
+
+def func(alist):
+    blist = alist.append(2)
+
+
+my_list = [1,2,3,4]
+
+my_dict = func(my_list)
+
+print(my_list)
+
+
+
+
+
+
+
+
