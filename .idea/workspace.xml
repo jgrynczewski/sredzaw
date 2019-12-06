@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/generatory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iteratory.py" beforeDir="false" afterPath="$PROJECT_DIR$/iteratory.py" afterDir="false" />
     </list>
@@ -73,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.iteratory">
+  <component name="RunManager" selected="Python.generatory">
     <configuration name="7" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,6 +96,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="generatory" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sredzaw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generatory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="iteratory" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,27 +130,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/iteratory.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="programowanie_funkcyjne" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sredzaw" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/programowanie_funkcyjne.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -181,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generatory" />
         <item itemvalue="Python.iteratory" />
         <item itemvalue="Python.zliczenia" />
         <item itemvalue="Python.stos" />
         <item itemvalue="Python.7" />
-        <item itemvalue="Python.programowanie_funkcyjne" />
       </list>
     </recent_temporary>
   </component>
@@ -305,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575624938389</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="interpreter">
+      <created>1575626689884</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1575626689885</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +345,7 @@
     <MESSAGE value="map, filter" />
     <MESSAGE value="stos i kolejki" />
     <MESSAGE value="zliczenia" />
-    <option name="LAST_COMMIT_MESSAGE" value="zliczenia" />
+    <MESSAGE value="interpreter" />
+    <option name="LAST_COMMIT_MESSAGE" value="interpreter" />
   </component>
 </project>

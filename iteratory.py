@@ -36,4 +36,4 @@ my_iterator_2 = MyCounter(5,100)
 print(list(my_iterator_2))
 
 for item in my_iterator_2:
-    print(list(item))
+    print(item)
