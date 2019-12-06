@@ -72,3 +72,39 @@ func_ref(5)
 #         self.l = []
 #     def add():
 #         self.l.append(self.c)
+
+def func0(a):
+    a=5
+
+b=3
+func0(b)
+print(b)
+
+def func_new(alist):
+    alist.append(2)
+
+my_list_new = [1,2,3,4]
+func_new(my_list_new)
+
+print(my_list_new)
+
+class A:
+    def __init__(self, l):
+        self.l = l
+    def add2(self):
+        self.l.append(2)
+
+my_list = [1,2,3]
+
+a = A(my_list)
+a.add2()
+
+print(my_list)
+
+def func_new_2(alist):
+    alist['k'] = 5
+
+m = {'a': 4}
+func_new_2(m)
+
+print(m)
