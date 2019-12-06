@@ -71,3 +71,30 @@ add_employee("Igor")
 print(emps)
 
 
+print('Listy, słowniki i krotki domyślnie kopiują się przez referencję!!!!!!')
+class A:
+    def __init__(self, l ):
+        self.l = l
+
+    def add(self,n):
+        self.l.append(n)
+
+list0 = [1,2,3]
+cl = A(list0).add(10)
+print(list0) # 10 dodło się także do listy pierwotnej
+
+
+
+print('Testujemy różne metody kopiowania')
+a=['help', 'copyright', 'credits', 'license']
+#b = a #tutaj będzie płytka kopia
+b = []
+#b= list(a)
+b.extend(a) #tu powstanie głęboka kopia
+#b[:]=a #tu teżpowstanie głęboka kopia
+b.append("XYZ")
+
+print(a)
+print(b)
+
+
