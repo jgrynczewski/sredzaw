@@ -1,5 +1,6 @@
-# isinstance
-# issubclass
+# Do dziedziczenia:
+# Funkcja isinstance
+# Funkcja issubclass
 
 class A:
     pass
@@ -13,8 +14,9 @@ b = B()
 print(isinstance(b, A))
 print(issubclass(B, A))
 
-# hasattr
-# getattr
+# Do obiektówki:
+# Funkcja hasattr
+# Funckja getattr
 
 class C:
     def __init__(self, a, b):
