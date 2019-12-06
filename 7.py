@@ -165,3 +165,33 @@ a.add()
 b.add()
 
 print(my_list)
+
+
+def func0(a):
+    a = 5
+
+b = 3
+func0(b)
+print(b)
+
+def func(alist):
+    alist['k'] = 5
+
+my_list=[1,2,3,4]
+func(my_list)
+print(my_list)
+
+
+class A:
+    def __init__(self, l):
+        self.l = l
+
+    def add2(self):
+        self.l.append(2)
+
+my_list = [1,2,3]
+
+a = A(my_list)
+a.add2()
+
+print(my_list)
