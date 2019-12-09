@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fibonacci.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fibonacci_my_cache.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/isogram.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zadanie_rekrutacja.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_decorator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.fibonacci_my_cache">
+  <component name="RunManager" selected="Python.my_decorator">
     <configuration name="fibonacci" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,7 +117,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="wyrażenia_generatora" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="my_decorator" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,7 +129,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wyrażenia_generatora.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_decorator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.my_decorator" />
         <item itemvalue="Python.fibonacci_my_cache" />
         <item itemvalue="Python.fibonacci" />
         <item itemvalue="Python.zadanie_rekrutacja" />
         <item itemvalue="Python.zliczenia" />
-        <item itemvalue="Python.wyrażenia_generatora" />
       </list>
     </recent_temporary>
   </component>
@@ -331,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575630534007</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="dekoratory cache">
+      <created>1575881859916</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1575881859916</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -366,7 +369,8 @@
     <MESSAGE value="interpreter" />
     <MESSAGE value="generatory" />
     <MESSAGE value="wyrazenia generotora" />
-    <option name="LAST_COMMIT_MESSAGE" value="wyrazenia generotora" />
+    <MESSAGE value="dekoratory cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="dekoratory cache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
