@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5e1f864-7739-431a-a771-60040dceb874" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nwd_rekurecujnie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fibonacci_my_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/fibonacci_my_cache.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.my_decorator">
+  <component name="RunManager" selected="Python.nwd_rekurecujnie">
     <configuration name="fibonacci" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,6 +140,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="nwd_rekurecujnie" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sredzaw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nwd_rekurecujnie.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="zadanie_rekrutacja" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sredzaw" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,34 +182,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zliczenia" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sredzaw" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zliczenia.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.my_decorator" />
+        <item itemvalue="Python.nwd_rekurecujnie" />
         <item itemvalue="Python.fibonacci_my_cache" />
+        <item itemvalue="Python.my_decorator" />
         <item itemvalue="Python.fibonacci" />
         <item itemvalue="Python.zadanie_rekrutacja" />
-        <item itemvalue="Python.zliczenia" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575881859916</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="tworzenie decoratora">
+      <created>1575883741279</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1575883741279</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,7 +379,8 @@
     <MESSAGE value="generatory" />
     <MESSAGE value="wyrazenia generotora" />
     <MESSAGE value="dekoratory cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="dekoratory cache" />
+    <MESSAGE value="tworzenie decoratora" />
+    <option name="LAST_COMMIT_MESSAGE" value="tworzenie decoratora" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
